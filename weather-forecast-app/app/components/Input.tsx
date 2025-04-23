@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Input = () => {
   return (
-    <form>
+    <form className="flex items-center md:w-2/4 w-full">
       <input
         type="text"
         placeholder="Enter city name"
