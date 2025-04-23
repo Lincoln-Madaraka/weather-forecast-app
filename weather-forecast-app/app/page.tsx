@@ -34,6 +34,30 @@ const Home = () => {
         }
   }
 };
+
+
+let content;
+if (Object.keys(data).length === 0 && error === "") { 
+  content = (
+    <div className="flex flex-col items-center justify-center h-full">
+      <h2 className="text-2xl font-bold">Welcome to Weather ForeCast</h2>
+      <p className="text-lg">Enter a city name</p>
+    </div>
+  );
+} else if (error) {
+  content = (
+    <div className="flex flex-col items-center justify-center h-full">  
+      <h2 className="text-2xl font-bold text-red-500">{error}</h2>
+      <p className="text-lg">Please try again</p>
+      <p className="text-lg">Enter a Valid city name</p>
+    </div>
+  );
+} else {
+  content = (
+      <div>  </div> )
+};
+
+
      return (
      <div className="bg-cover bg-gradient-to-r from-gray-300 via-gray-100 to-white h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
