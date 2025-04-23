@@ -14,7 +14,7 @@ const Home = () => {
   const [location, setLocation] = useState(" ")
   const [error , setError] = useState("")
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.API_Key}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=30ed468091ceccdee5c3b95df2dc07ba&units=metric`;
 
   const handleSearch = async (e: React. KeyboardEvent<HTMLInputElement>) => { 
       if (e.key === "Enter") {
