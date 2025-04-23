@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/Input*": ["app/components/Input/*"],
+      "@/components*": ["app/components/*"]
     },
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
