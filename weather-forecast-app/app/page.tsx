@@ -52,10 +52,7 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg">Enter a Valid city name</p>
     </div>
   );
-} else {
-  content = (
-      <div>  </div> )
-};
+} 
 
 
      return (
