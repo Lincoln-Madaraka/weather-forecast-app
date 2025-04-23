@@ -1,7 +1,12 @@
 "use client";
 import { FiSearch } from "react-icons/fi";
 
-const Input = () => {
+interface InputProps {
+  handleSearch: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  setLocation: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Input = ({handleSearch, setLocation}:InputProps ) => {
   return (
     <div className="pt-10 flex justify-center "> {/* Centering the form */}
       <form className="flex items-center bg-white p-2 rounded-lg shadow-lg w-3/4 md:w-2/4"> {/* Form Container */}
