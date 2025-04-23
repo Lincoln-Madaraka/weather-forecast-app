@@ -6,10 +6,16 @@ const Home = () => {
      <div className="bg-cover bg-gradient-to-r from-blue-100 to-blue-300 h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
-        <div>
-          <h1 className="text-3xl font-bold text-center">Weather Forecast</h1>
-          <Input />
+          {/* Logo */}
+        <div className="flex justify-center items-center pt-8">
+          <h1 className="text-4xl font-bold text-center text-white">Weather Forecast</h1>
         </div>
+           {/* Input Section */}
+           <div className="flex justify-center items-center mt-8">
+          <Input />
+           </div>
+         
+
       </div>
      </div>
      );
