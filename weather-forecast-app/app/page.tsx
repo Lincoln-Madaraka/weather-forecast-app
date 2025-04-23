@@ -8,10 +8,10 @@ const Home = () => {
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold text-white">Weather Forecast</h1>
+          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-blue-100 to-blue-300 bg-clip-text text-transparent">Weather Forecast</h1>
         </div>
            {/* Input Section */}
-           
+
           <Input />
          
 
