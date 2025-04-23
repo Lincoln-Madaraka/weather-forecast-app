@@ -11,9 +11,7 @@ const Home = () => {
           <h1 className="text-4xl font-bold text-center text-white">Weather Forecast</h1>
         </div>
            {/* Input Section */}
-           <div className="flex justify-center items-center mt-8">
           <Input />
-           </div>
          
 
       </div>
