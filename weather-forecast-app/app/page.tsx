@@ -4,11 +4,17 @@ import React, { useState } from "react";
 import Input from "./components/Input";
 
 const Home = () => {
-  const[data, setData ] = useState({});
+  interface WeatherData {
+    main?: {
+      temp: number;
+    };
+  }
+  
+  const [data, setData] = useState<WeatherData>({});
   const [location, setLocation] = useState(" ")
   const [error , setError] = useState("")
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY }&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.API_Key}&units=metric`;
 
   const handleSearch = async (e: React. KeyboardEvent<HTMLInputElement>) => { 
       if (e.key === "Enter") {
@@ -39,7 +45,7 @@ const Home = () => {
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
           setLocation={setLocation} />
-         
+         {data.main ? <div className="flex flex-col items-center justify-center h-full">{data.main.temp}°C</div> : null}
 
       </div>
      </div>
