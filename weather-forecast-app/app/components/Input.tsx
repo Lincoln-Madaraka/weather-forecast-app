@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Input = () => {
   return (
-    <div className="flex justify-center items-center mt-0.5 h-screen"> {/* Centering the form */}
+    <div className="pt-20 flex justify-center items-center mt-0.5 h-screen"> {/* Centering the form */}
       <form className="flex items-center bg-white p-2 rounded-lg shadow-lg w-3/4 md:w-2/4"> {/* Form Container */}
         <input
           type="text"
