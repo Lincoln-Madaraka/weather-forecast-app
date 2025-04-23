@@ -29,12 +29,12 @@ const Home = () => {
   }
 };
      return (
-     <div className="bg-cover bg-gradient-to-r from-gray-300 via-gray-100 to-white h-screen">
+     <div className="bg-cover bg-gradient-to-r from-sky-400 to-blue-600 h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent drop-shadow-md">Weather Forecast</h1>
+          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent drop-shadow-md">Weather Forecast</h1>
         </div>
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
