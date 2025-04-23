@@ -7,7 +7,7 @@ const Home = () => {
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
-        <div className="flex justify-center items-center pt-8">
+        <div className="flex justify-center items-center pt-3">
           <h1 className="text-4xl font-bold text-center text-white">Weather Forecast</h1>
         </div>
            {/* Input Section */}
