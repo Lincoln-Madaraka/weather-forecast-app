@@ -29,7 +29,7 @@ const Home = () => {
   }
 };
      return (
-     <div className="bg-cover bg-gradient-to-r from-sky-400 to-blue-600 h-screen">
+     <div className="bg-cover bg-gradient-to-r from-gray-300 via-gray-100 to-white h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
