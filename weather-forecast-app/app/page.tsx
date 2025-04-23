@@ -8,7 +8,7 @@ const Home = () => {
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Weather Forecast</h1>
+          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-blue-100 to-blue-200 bg-clip-text text-transparent">Weather Forecast</h1>
         </div>
            {/* Input Section */}
 
