@@ -14,6 +14,8 @@ const Input = ({handleSearch, setLocation}:InputProps ) => {
           type="text"
           placeholder="Enter city name"
           className="w-full p-1 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+         onKeyDown={handleSearch} // Trigger search on Enter key
+         onChange={(e) => setLocation(e.target.value)} // Update location state on input change
         />
         <div className="ml-0.5">
           <FiSearch /> {/* Search icon */}
