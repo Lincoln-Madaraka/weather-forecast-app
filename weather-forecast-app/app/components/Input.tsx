@@ -8,9 +8,9 @@ const Input = () => {
         <input
           type="text"
           placeholder="Enter city name"
-          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-1 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <div className="ml-1">
+        <div className="ml-0.5">
           <FiSearch /> {/* Search icon */}
         </div>
       </form>
