@@ -1,5 +1,5 @@
 "use clientt";
-import {} from "app/components/Input";
+import Input from "app/components/Input";
 
 const Home = () => {
      return (
