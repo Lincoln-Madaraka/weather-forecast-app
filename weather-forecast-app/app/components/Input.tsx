@@ -1,7 +1,6 @@
 "use client";
 import { FiSearch } from "react-icons/fi";
 
-
 const Input = () => {
   return (
     <form>
