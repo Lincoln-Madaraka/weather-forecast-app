@@ -51,7 +51,7 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg">Please try again</p>
       <p className="text-lg">Enter a Valid city name</p>
     </div>
-  );
+  )
 } 
 
 
@@ -66,10 +66,19 @@ if (Object.keys(data).length === 0 && error === "") {
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
           setLocation={setLocation} />
-         {data.main ? <div className="flex flex-col items-center justify-center h-full">{data.main.temp}°C</div> : null}
-
+         {data.main ? (
+            <div className="flex flex-col items-center justify-center h-full">
+               <h2 className="text-4xl font-semibold">{data.main.temp}°C</h2>
+            </div>
+               ) : (
+                  content
+                    )}
+        </div>
+        {/* Footer */}
+        <div className="flex justify-center items-center h-16 bg-white/25 rounded-b-lg">
+          <p className="text-sm text-gray-600">© 2023 Weather Forecast. All rights reserved.</p>
+        </div>
       </div>
-     </div>
      );
 };
 
