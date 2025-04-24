@@ -10,9 +10,7 @@ const current = ({ data }) => {
     {/* Left section: Text details */}
     <div className="flex flex-col justify-center text-white">
       <h2 className="text-2xl font-bold drop-shadow-md">Today</h2>
-      <p className="text-lg text-white/90">{currentDate}</p>
-        
-        {/* Right section: Weather icon */}
+       {/* Right section: Weather icon */}
     {weatherIcon && (
       <div className="flex items-center justify-center">
         <img
@@ -22,7 +20,7 @@ const current = ({ data }) => {
         />
       </div>
     )}
-
+      <p className="text-lg text-white/90">{currentDate}</p>
       <h2 className="text-4xl font-bold mt-4">{Math.round(data.main.temp)}°C</h2>
 
       <span className="capitalize text-base text-white/80 mt-2">
