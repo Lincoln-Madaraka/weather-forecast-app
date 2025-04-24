@@ -90,10 +90,6 @@ if (Object.keys(data).length === 0 && error === "") {
             </div>
              
         </div>
-        {/* Footer */}
-        <div className="flex justify-center items-center h-16 bg-white/25 rounded-b-lg">
-          <p className="text-sm text-gray-600">© 2025 Weather Forecast. All rights reserved.</p>
-        </div>
       </div>
      );
 };
