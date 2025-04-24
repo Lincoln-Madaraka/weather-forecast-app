@@ -36,7 +36,7 @@ const current = ({ data }:CurrentProps ) => {
       <span className="capitalize text-base text-blue-300 mt-2">
         {data.weather[0].description}
       </span>
-      <div className="flex items-center text-black bg-white/90 px-1 py-1 rounded-xl shadow-lg">
+      <div className="flex items-center text-black bg-white/90 px-2 py-0.5 rounded-xl shadow-lg">
         <IoLocationSharp className="text-blue-500" size={20} />
       <span className="text-md mt-2">
         {data.name}, {data.sys.country}
