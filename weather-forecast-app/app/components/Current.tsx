@@ -6,40 +6,33 @@ const current = ({ data }) => {
     const weatherIcon = data.weather[0].icon;
 
   return ( 
-    <div className="flex flex-col items-center justify-center h-full">
-    {/* Top row: Icon + Today + Date */}
-    <div className="flex items-center gap-4 mb-4">
-      {/* Icon and description */}
-      {weatherIcon && (
-        <div className="flex flex-col items-center">
+    <div className="w-full flex justify-between items-center gap-6">
+      {/* Left side: Today and Date */}
+      <div>
+        <h2 className="text-2xl font-bold text-white drop-shadow-md">Today</h2>
+        <p className="text-lg text-white/90">{currentDate}</p>
+      </div>
+
+      {/* Right side: Icon, Description, Temp, and Location */}
+      <div className="flex items-center gap-4">
+        {weatherIcon && (
           <img
             src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
             alt={data.weather[0].description}
             className="w-[60px] object-cover"
           />
-          <span className="text-sm text-white/80 capitalize">
+        )}
+        <div className="flex flex-col items-start text-white">
+          <span className="capitalize text-sm text-white/80">
             {data.weather[0].description}
           </span>
+          <h2 className="text-3xl font-bold">{Math.round(data.main.temp)}°C</h2>
+          <p className="text-sm">
+            {data.name}, {data.sys.country}
+          </p>
         </div>
-      )}
-
-      {/* Today + Date */}
-      <div>
-        <h2 className="text-2xl font-bold text-white drop-shadow-md">Today</h2>
-        <p className="text-lg text-white/90">{currentDate}</p>
       </div>
     </div>
-
-    {/* Temperature and Location */}
-    <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-4xl font-bold text-white drop-shadow-md">
-        {Math.round(data.main.temp)}°C
-      </h2>
-      <p className="text-lg text-white/90">
-        {data.name}, {data.sys.country}
-      </p>
-    </div>
-  </div>
   );
 
 }
