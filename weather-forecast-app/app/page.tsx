@@ -39,7 +39,7 @@ const Home = () => {
 let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
-    <div>
+    <div className="flex flex-col items-center justify-center h-full">
       <h2 className="text-2xl font-bold">Welcome to Weather Forecast</h2>
       <p className="text-lg">Enter a city name</p>
     </div>
