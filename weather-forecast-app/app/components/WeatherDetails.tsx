@@ -1,26 +1,26 @@
 const WeatherDetails = ({data}) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-4 bg-white/90 rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-800 drop-shadow-md">Weather Details</h2>
-      <div className="flex flex-col items-start mt-4"> 
-        <p className="text-lg text-gray-800">Location:{data.name}, {data.sys.country}</p>
-        <p className="text-lg text-gray-800">Weather:{data.weather[0].description}</p>
-        <p className="text-lg text-gray-800">Feels Like:{Math.round(data.main.feels_like)}°C</p>
-        <p className="text-lg text-gray-800">Visibility:{data.visibility / 1000} km</p>
-        <p className="text-lg text-gray-800">Cloudiness:{data.clouds.all}%</p>
-        <p className="text-lg text-gray-800">Sunrise:{new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
-        <p className="text-lg text-gray-800">Sunset:{new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
-        <p className="text-lg text-gray-800">Temperature:{Math.round(data.main.temp)}°C</p>
-        <p className="text-lg text-gray-800">Humidity:{data.main.humidity}%</p>
-        <p className="text-lg text-gray-800">Wind Speed:{data.wind.speed} m/s</p>
-        <p className="text-lg text-gray-800">Pressure:{data.main.pressure} hPa</p>
-        <p className="text-lg text-gray-800">Wind Direction:{data.wind.deg}°</p>
-        <p className="text-lg text-gray-800">Timezone:{data.timezone / 3600} hours</p>
-        <p className="text-lg text-gray-800">Weather Icon:{data.weather[0].icon}</p>
-        <p className="text-lg text-gray-800">Weather Main:{data.weather[0].main}</p>
+    <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center px-6 py-6 bg-white/90 rounded-2xl shadow-xl">
+    <h2 className="text-3xl font-bold text-gray-800 drop-shadow mb-6">Weather Details</h2>
 
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 w-full text-gray-800">
+      <p><span className="font-semibold">Location:</span> {data.name}, {data.sys.country}</p>
+      <p><span className="font-semibold">Weather:</span> {data.weather[0].description}</p>
+      <p><span className="font-semibold">Feels Like:</span> {Math.round(data.main.feels_like)}°C</p>
+      <p><span className="font-semibold">Temperature:</span> {Math.round(data.main.temp)}°C</p>
+      <p><span className="font-semibold">Humidity:</span> {data.main.humidity}%</p>
+      <p><span className="font-semibold">Visibility:</span> {data.visibility / 1000} km</p>
+      <p><span className="font-semibold">Cloudiness:</span> {data.clouds.all}%</p>
+      <p><span className="font-semibold">Wind Speed:</span> {data.wind.speed} m/s</p>
+      <p><span className="font-semibold">Wind Direction:</span> {data.wind.deg}°</p>
+      <p><span className="font-semibold">Pressure:</span> {data.main.pressure} hPa</p>
+      <p><span className="font-semibold">Sunrise:</span> {new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
+      <p><span className="font-semibold">Sunset:</span> {new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+      <p><span className="font-semibold">Timezone:</span> UTC+{data.timezone / 3600}</p>
+      <p><span className="font-semibold">Weather Icon:</span> {data.weather[0].icon}</p>
+      <p><span className="font-semibold">Weather Main:</span> {data.weather[0].main}</p>
     </div>
+  </div>
   )
 }
 
