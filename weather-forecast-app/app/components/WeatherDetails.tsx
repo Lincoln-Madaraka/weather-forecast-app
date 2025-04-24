@@ -1,4 +1,4 @@
-import { CiLocationOn } from "react-icons/ci";
+
 
 
 const WeatherDetails = ({data}) => {
@@ -33,7 +33,7 @@ const WeatherDetails = ({data}) => {
 >
     <h2 className="text-3xl font-bold text-gray-800 drop-shadow mb-6">Weather Details</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 w-full text-gray-800">
-      <p><span className="font-semibold"><span><CiLocationOn/>Location:</span></span> {data.name}, {data.sys.country}</p>
+      <p><span className="font-semibold">Location:</span>{data.name}, {data.sys.country}</p>
       <p><span className="font-semibold">Weather:</span> {data.weather[0].description}</p>
       <p><span className="font-semibold">Feels Like:</span> {Math.round(data.main.feels_like)}°C</p>
       <p><span className="font-semibold">Temperature:</span> {Math.round(data.main.temp)}°C</p>
@@ -46,14 +46,13 @@ const WeatherDetails = ({data}) => {
       <p><span className="font-semibold">Sunrise:</span> {new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
       <p><span className="font-semibold">Sunset:</span> {new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
       <p><span className="font-semibold">Timezone:</span> UTC+{data.timezone / 3600}</p>
-      <p><span className="font-semibold">Weather Main:</span> {data.weather[0].main}</p>
       {weatherIcon && (
       <span>
         <img
           src={`https://openweathermap.org/img/wn/${weatherIcon}@4x.png`}
           alt={data.weather[0].main}
           className="w-[50px] h-[50px] object-contain"
-        />
+        /> Weather Main: {data.weather[0].main} 
       </span>
     )} 
     </div>
