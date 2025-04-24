@@ -40,7 +40,7 @@ let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
     <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-2xl font-bold">Welcome to Weather ForeCast</h2>
+      <h2 className="text-2xl font-bold">Welcome to Weather Forecast</h2>
       <p className="text-lg">Enter a city name</p>
     </div>
   );
@@ -56,12 +56,12 @@ if (Object.keys(data).length === 0 && error === "") {
 
 
      return (
-     <div className="bg-cover bg-gradient-to-r from-gray-300 via-gray-100 to-white h-screen">
+     <div className="bg-cover bg-gradient-to-r from-pink-300 via-rose-200 via-purple-200 to-yellow-100 h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent drop-shadow-md">Weather Forecast</h1>
+          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent drop-shadow-md">Weather Forecast</h1>
         </div>
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
