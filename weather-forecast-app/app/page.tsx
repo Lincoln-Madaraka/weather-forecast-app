@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import Input from "./components/Input";
 import  Current from "./components/current";
-import WeekForecast  from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
 
 
@@ -78,7 +77,6 @@ if (Object.keys(data).length === 0 && error === "") {
     <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
       7-Day Forecast
     </h2>
-    <WeekForecast />
   </div>
 </div>
 
