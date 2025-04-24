@@ -29,10 +29,10 @@ const current = ({ data }) => {
         {data.weather[0].description}
       </span>
       <div className="flex items-center text-black bg-white/90 px-2 py-2 rounded-xl shadow-lg">
-      <IoLocationSharp />
-      <h2 className="text-md mt-2">
+        <IoLocationSharp className="text-blue-500" size={20} />
+      <span className="text-md mt-2">
         {data.name}, {data.sys.country}
-      </h2>
+      </span>
       </div>
     </div>
   </div>
