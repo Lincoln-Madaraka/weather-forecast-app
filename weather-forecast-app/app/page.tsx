@@ -9,12 +9,15 @@ import WeatherDetails from "./components/WeatherDetails";
 
 function Home() {
   interface WeatherData {
-    main?: {
+    main: {
       temp: number;
     };
+    weather: { icon: string; description: string }[];
+    name: string;
+    sys: { country: string };
   }
   
-  const [data, setData] = useState<WeatherData>({});
+  const [data, setData] = useState<WeatherData>({} as WeatherData);
   const [location, setLocation] = useState(" ")
   const [error , setError] = useState("")
 
@@ -32,7 +35,7 @@ function Home() {
         setLocation("");
       } catch {
         setError("City not found");
-        setData({});
+        setData({ } as WeatherData);
       }
 };
 
@@ -65,7 +68,7 @@ if (Object.keys(data).length === 0 && error === "") {
       {/* Right side - Weather Details & 7 Day Forecast */}
       <div className="flex-[2] flex flex-col gap-6 justify-center">
         <WeatherDetails/>
-
+        </div>
         <div className="flex flex-col items-center">
           <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
             7-Day Forecast
@@ -73,7 +76,7 @@ if (Object.keys(data).length === 0 && error === "") {
           <WeekForecast />
       </div>
 
-    </div>
+    
   </div>
   );
 }
