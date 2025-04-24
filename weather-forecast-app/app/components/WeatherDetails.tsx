@@ -46,16 +46,16 @@ const WeatherDetails = ({data}) => {
       <p><span className="font-semibold">Sunrise:</span> {new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
       <p><span className="font-semibold">Sunset:</span> {new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
       <p><span className="font-semibold">Timezone:</span> UTC+{data.timezone / 3600}</p>
+      <p><span className="font-semibold">Weather Main:</span> {data.weather[0].main}</p>
       {weatherIcon && (
       <span>
         <img
           src={`https://openweathermap.org/img/wn/${weatherIcon}@4x.png`}
           alt={data.weather[0].main}
-          className="w-[100px] h-[100px] object-contain"
+          className="w-[50px] h-[50px] object-contain"
         />
       </span>
     )} 
-    <p><span className="font-semibold">Weather Main:</span> {data.weather[0].main}</p>
     </div>
   </div>
   )
