@@ -55,8 +55,10 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg text-gray-400">Please try again</p>
       <p className="text-lg text-gray-400">Enter a Valid city name</p>
     </div>
-  )
-}  else {
+  );
+}  else if (Object.keys(data).length > 0) {
+  // If data is available but no error, show the weather details
+  // If data is available, show the weather details
   content = (
     <div>
       <div className="flex flex-col items-center justify-center h-full">
@@ -65,7 +67,7 @@ if (Object.keys(data).length === 0 && error === "") {
         <WeekForecast />
       </div>
     </div>
-  )
+  );
 }
 
 
