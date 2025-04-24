@@ -16,13 +16,12 @@ const current = ({ data }) => {
               <img  src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
       alt={data.weather[0].description} 
       className="w-[50px] object-cover" 
-    />
-    <span className="text-xl ">{data.weather[0].description}</span>
-             
+    /> 
             </div>
             )}
             <div className="flex flex-col items-center justify-center h-full">
                 <h2 className="text-4xl font-bold text-white drop-shadow-md">{Math.round(data.main.temp)}°C</h2>
+                <span className="text-x0.5 text-gray-100 ">{data.weather[0].description}</span>
               <p className="text-lg text-white/90">{data.name}, {data.sys.country}</p>
           </div>
       </div>
