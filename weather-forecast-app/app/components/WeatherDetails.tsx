@@ -34,6 +34,8 @@ const WeatherDetails = ({data}) => {
     <h2 className="text-3xl font-bold text-gray-800 drop-shadow mb-6">Weather Details</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 w-full text-gray-800">
       <p><span className="font-semibold">Location:</span>{data.name}, {data.sys.country}</p>
+      <p><span className="font-semibold">Date:</span> {new Date(data.dt * 1000).toLocaleDateString()}</p>
+      <p><span className="font-semibold">Time:</span> {new Date(data.dt * 1000).toLocaleTimeString()}</p>
       <p><span className="font-semibold">Weather:</span> {data.weather[0].description}</p>
       <p><span className="font-semibold">Feels Like:</span> {Math.round(data.main.feels_like)}°C</p>
       <p><span className="font-semibold">Temperature:</span> {Math.round(data.main.temp)}°C</p>
