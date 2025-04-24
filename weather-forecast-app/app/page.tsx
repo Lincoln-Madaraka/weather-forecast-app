@@ -78,7 +78,7 @@ if (Object.keys(data).length === 0 && error === "") {
     <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
       7-Day Forecast
     </h2>
-    <WeekForecast />
+    <WeekForecast data={data}/>
   </div>
 </div>
 
