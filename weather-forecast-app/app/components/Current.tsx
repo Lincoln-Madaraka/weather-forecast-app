@@ -7,11 +7,23 @@ const current = ({ data }) => {
 
   return ( 
     <div className="flex flex-col items-center justify-center h-full">
+        <div>
       <h2 className="text-2xl font-bold text-white drop-shadow-md">Today</h2>
         <p className="text-lg text-white/90">{currentDate}</p>
-         <div>{weatherIcon}</div>
+       </div>
+            {weatherIcon && (
+                <div>
+              <img  src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
+      alt={data.weather[0].description} 
+      className="w-20 h-20" 
+    />
+    <span className="text-xl">{data.weather[0].description}</span>
+             
+            </div>
+            )}
     </div>
   );
-};
+
+}
 
 export default current;
