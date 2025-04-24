@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import Input from "./components/Input";
-import  Current from "./components/current";
+import  Current from "./components/Current";
 import WeatherDetails from "./components/WeatherDetails";
 
 
