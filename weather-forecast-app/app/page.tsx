@@ -2,6 +2,10 @@
 import React, { useState } from "react";
 
 import Input from "./components/Input";
+import Current from "./components/current";
+import WeekForecast  from "./components/WeekForecast";
+import WeatherDetails from "./components/WeatherDetails";
+
 
 const Home = () => {
   interface WeatherData {
@@ -52,7 +56,17 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg text-gray-400">Enter a Valid city name</p>
     </div>
   )
-} 
+}  else {
+  content = (
+    <div>
+      <div className="flex flex-col items-center justify-center h-full">
+        <Current />
+        <WeatherDetails />
+        <WeekForecast />
+      </div>
+    </div>
+  )
+}
 
 
      return (
