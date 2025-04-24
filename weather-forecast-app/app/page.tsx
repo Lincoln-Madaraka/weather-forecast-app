@@ -43,8 +43,8 @@ let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
     <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-2xl font-bold text-white drop-shadow-md">Welcome to Weather Forecast</h2>
-      <p className="text-lg text-white/90">Enter a city name</p>
+      <h2 className="text-3xl font-bold text-white drop-shadow-md">Welcome to Weather Forecast</h2>
+      <p className="text-2g text-white/90">Enter a city name</p>
     </div>
   );
 } else if (error !== "") { 
@@ -83,7 +83,7 @@ if (Object.keys(data).length === 0 && error === "") {
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent drop-shadow-md">Weather Forecast</h1>
+          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent drop-shadow-md">API Weather</h1>
         </div>
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
