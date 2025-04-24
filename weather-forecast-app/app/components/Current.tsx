@@ -6,10 +6,6 @@ interface CurrentProps {
     main: { temp: number };
     weather: { icon: string; description: string }[];
     name: string;
-    location?: {
-        country: string;
-    }
-
     sys: { country: string };
     };
   }
@@ -43,7 +39,7 @@ const current = ({ data }:CurrentProps ) => {
       <div className="flex items-center text-black bg-white/90 px-2 py-2 rounded-xl shadow-lg">
         <IoLocationSharp className="text-blue-500" size={20} />
       <span className="text-base font-semibold ml-2">
-        {data.name}, {data.location?.country || "Unknown"}, {data.sys.country}
+        {data.name},{data.sys.country}
       </span>
       </div>
     </div>
