@@ -17,11 +17,15 @@ const current = ({ data }) => {
       alt={data.weather[0].description} 
       className="w-20 h-20" 
     />
-    <span className="text-xl">{data.weather[0].description}</span>
+    <span className="text-xl ">{data.weather[0].description}</span>
              
             </div>
             )}
-    </div>
+            <div className="flex flex-col items-center justify-center h-full">
+                <h2 className="text-4xl font-bold text-white drop-shadow-md">{Math.round(data.main.temp)}°C</h2>
+              <p className="text-lg text-white/90">{data.name}, {data.sys.country}</p>
+          </div>
+      </div>
   );
 
 }
