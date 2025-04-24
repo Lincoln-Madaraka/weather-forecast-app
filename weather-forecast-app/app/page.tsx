@@ -71,13 +71,6 @@ if (Object.keys(data).length === 0 && error === "") {
       <WeatherDetails />
     </div>
   </div>
-
-  {/* Bottom Section: Week Forecast */}
-  <div className="flex flex-col items-center">
-    <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
-      7-Day Forecast
-    </h2>
-  </div>
 </div>
 
   );
