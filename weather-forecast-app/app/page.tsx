@@ -68,7 +68,7 @@ if (Object.keys(data).length === 0 && error === "") {
 
     {/* Right: Weather Details */}
     <div className="flex-[2] flex flex-col gap-6 justify-center">
-      <WeatherDetails />
+      <WeatherDetails data ={data}/>
     </div>
   </div>
 </div>
