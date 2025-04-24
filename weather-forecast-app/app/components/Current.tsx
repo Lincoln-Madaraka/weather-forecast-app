@@ -13,6 +13,7 @@ const current = ({ data }) => {
       <h2 className="text-md mt-2">
         {data.name}, {data.sys.country}
       </h2>
+      <p className="text-lg text-gray-800">{currentDate}</p>
        {/* Right section: Weather icon */}
     {weatherIcon && (
       <span>
@@ -23,7 +24,7 @@ const current = ({ data }) => {
         />
       </span>
     )}
-      <p className="text-lg text-white/90">{currentDate}</p>
+      
       <h2 className="text-4xl font-bold mt-4">{Math.round(data.main.temp)}°C</h2>
 
       <span className="capitalize text-base text-white/80 mt-2">
