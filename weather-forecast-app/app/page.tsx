@@ -43,8 +43,8 @@ let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
     <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-3xl font-bold text-white drop-shadow-md">Welcome to Weather Forecast</h2>
-      <p className="text-2g text-white/90">Enter a city name</p>
+      <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2"> Hey there, sky watcher! Ready for today’s forecast?</h2>
+      <p className="text-1g text-white/90">Enter a city name to explore the skies...</p>
     </div>
   );
 } else if (error !== "") { 
