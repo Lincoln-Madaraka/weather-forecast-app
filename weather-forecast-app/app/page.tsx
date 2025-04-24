@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FiSearch } from "react-icons/fi";
 
 import Input from "./components/Input";
 import  Current from "./components/current";
@@ -8,7 +7,7 @@ import WeekForecast  from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
 
 
-const Home = () => {
+function Home() {
   interface WeatherData {
     main?: {
       temp: number;
@@ -21,23 +20,20 @@ const Home = () => {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=30ed468091ceccdee5c3b95df2dc07ba&units=metric`;
 
-  const handleSearch = async (e: React. KeyboardEvent<HTMLInputElement>) => { 
-      if (e.key === "Enter") {
-        e.preventDefault()
-        try {
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error()
-          }
-          const data = await response.json();
-          setData(data)
-          setLocation("")
-          setError("")
-        } catch (error) {
-          setError("City not found")
-          setData({})
-        }
-  }
+  const handleSearch = async (e: React. KeyboardEvent<HTMLInputElement>  | React.MouseEvent<HTMLButtonElement>) => { 
+      if ("key"  in e && e.key !== "Enter") 
+        return;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error();
+        const weatherData = await response.json();
+        setData(weatherData);
+        setError("");
+        setLocation("");
+      } catch {
+        setError("City not found");
+        setData({});
+      }
 };
 
 
@@ -60,10 +56,7 @@ if (Object.keys(data).length === 0 && error === "") {
 }  else if (data.main?.temp) {
   // If data is available, show the weather details
   content = (
-    
-    <div className="flex flex-col items-center justify-center h-full px-4 py-6">
     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 w-full max-w-6xl shadow-lg flex flex-col lg:flex-row gap-6">
-    <FiSearch />
       {/* Left side - Current weather */}
       <div className="flex-1 flex justify-center items-center">
         <Current data={data} />
@@ -78,7 +71,6 @@ if (Object.keys(data).length === 0 && error === "") {
             7-Day Forecast
           </h2>
           <WeekForecast />
-        </div>
       </div>
 
     </div>
@@ -108,4 +100,4 @@ if (Object.keys(data).length === 0 && error === "") {
      );
 };
 
-export default  Home;
+export default Home;
