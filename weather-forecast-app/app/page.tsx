@@ -59,16 +59,28 @@ if (Object.keys(data).length === 0 && error === "") {
 }  else if (data.main?.temp) {
   // If data is available, show the weather details
   content = (
-    <div>
-      <div className="flex flex-col items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-full px-4 py-6">
+    <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 w-full max-w-6xl shadow-lg flex flex-col lg:flex-row gap-6">
+
+      {/* Left side - Current weather */}
+      <div className="flex-1 flex justify-center items-center">
         <Current data={data} />
-        <WeatherDetails />
-        </div>
-      <div className="flex flex-col items-center justify-center h-full">
-        <h2 className="text-2xl font-bold text-white drop-shadow-md">7-Day Forecast</h2>
-        <WeekForecast /> 
       </div>
+
+      {/* Right side - Weather Details & 7 Day Forecast */}
+      <div className="flex-[2] flex flex-col gap-6 justify-center">
+        <WeatherDetails/>
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
+            7-Day Forecast
+          </h2>
+          <WeekForecast />
+        </div>
+      </div>
+
     </div>
+  </div>
   );
 }
 
