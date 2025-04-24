@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { FiSearch } from "react-icons/fi";
 
 import Input from "./components/Input";
 import  Current from "./components/current";
@@ -59,9 +60,10 @@ if (Object.keys(data).length === 0 && error === "") {
 }  else if (data.main?.temp) {
   // If data is available, show the weather details
   content = (
+    
     <div className="flex flex-col items-center justify-center h-full px-4 py-6">
     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 w-full max-w-6xl shadow-lg flex flex-col lg:flex-row gap-6">
-
+    <FiSearch />
       {/* Left side - Current weather */}
       <div className="flex-1 flex justify-center items-center">
         <Current data={data} />

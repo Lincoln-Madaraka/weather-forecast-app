@@ -1,5 +1,4 @@
 "use client";
-import { FiSearch } from "react-icons/fi";
 
 interface InputProps {
   handleSearch: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -18,7 +17,7 @@ const Input = ({handleSearch, setLocation}:InputProps ) => {
          onChange={(e) => setLocation(e.target.value)} // Update location state on input change
         />
         <div className="ml-0.5">
-          <FiSearch /> {/* Search icon */}
+         
         </div>
       </form>
     </div>
