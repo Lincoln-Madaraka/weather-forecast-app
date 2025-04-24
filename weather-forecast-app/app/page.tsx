@@ -10,10 +10,18 @@ function Home() {
   interface WeatherData {
     main: {
       temp: number;
+      feels_like: number;
+      humidity: number;
+      pressure: number;
     };
-    weather: { icon: string; description: string }[];
+    weather: { icon: string; description: string; main: string }[];
     name: string;
-    sys: { country: string };
+    sys: { country: string; sunrise: number; sunset: number };
+    wind: { speed: number; deg: number };
+    visibility: number;
+    clouds: { all: number };
+    dt: number;
+    timezone: number;
   }
   
   const [data, setData] = useState<WeatherData>({} as WeatherData);
