@@ -8,8 +8,11 @@ const current = ({ data }) => {
   return ( 
     <div className="w-full flex justify-between items-center px-4">
     {/* Left section: Text details */}
-    <div className="flex flex-col justify-center text-white">
-      <h2 className="text-2xl font-bold drop-shadow-md">Today</h2>
+    <div className="flex flex-col justify-center text-gray-800">
+      <h1 className="text-2xl font-bold text-gray-800 drop-shadow-md">Today</h1>
+      <h2 className="text-md mt-2">
+        {data.name}, {data.sys.country}
+      </h2>
        {/* Right section: Weather icon */}
     {weatherIcon && (
       <span>
@@ -27,9 +30,7 @@ const current = ({ data }) => {
         {data.weather[0].description}
       </span>
 
-      <p className="text-md mt-2">
-        {data.name}, {data.sys.country}
-      </p>
+      
     </div>
 
     
