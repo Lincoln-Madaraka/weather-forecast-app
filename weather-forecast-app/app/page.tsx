@@ -44,8 +44,8 @@ let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
     <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-gray-200 drop-shadow-md">Welcome to Weather Forecast</h2>
-      <p className="text-lg text-gray-400">Enter a city name</p>
+      <h2 className="text-2xl font-bold text-white drop-shadow-md">Welcome to Weather Forecast</h2>
+      <p className="text-lg text-white/90">Enter a city name</p>
     </div>
   );
 } else if (error !== "") { 
@@ -65,7 +65,7 @@ if (Object.keys(data).length === 0 && error === "") {
         <WeatherDetails />
         </div>
       <div className="flex flex-col items-center justify-center h-full">
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-gray-200 drop-shadow-md">7-Day Forecast</h2>
+        <h2 className="text-2xl font-bold text-white drop-shadow-md">7-Day Forecast</h2>
         <WeekForecast /> 
       </div>
     </div>
