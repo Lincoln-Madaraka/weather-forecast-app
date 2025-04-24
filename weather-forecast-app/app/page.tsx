@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import Input from "./components/Input";
 import  Current from "./components/current";
-import WeekForecast  from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
 
 
@@ -71,14 +70,6 @@ if (Object.keys(data).length === 0 && error === "") {
     <div className="flex-[2] flex flex-col gap-6 justify-center">
       <WeatherDetails />
     </div>
-  </div>
-
-  {/* Bottom Section: Week Forecast */}
-  <div className="flex flex-col items-center">
-    <h2 className="text-2xl font-bold text-white drop-shadow-md mb-2">
-      7-Day Forecast
-    </h2>
-    <WeekForecast data={data}/>
   </div>
 </div>
 
