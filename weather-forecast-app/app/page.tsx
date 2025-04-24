@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import Input from "./components/Input";
-import Current from "./components/current";
+import  Current from "./components/current";
 import WeekForecast  from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
 
@@ -61,7 +61,7 @@ if (Object.keys(data).length === 0 && error === "") {
   content = (
     <div>
       <div className="flex flex-col items-center justify-center h-full">
-        <Current />
+        <Current data={data} />
         <WeatherDetails />
         </div>
       <div className="flex flex-col items-center justify-center h-full">
