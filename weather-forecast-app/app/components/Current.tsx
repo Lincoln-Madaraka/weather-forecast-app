@@ -6,33 +6,34 @@ const current = ({ data }) => {
     const weatherIcon = data.weather[0].icon;
 
   return ( 
-    <div className="w-full flex justify-between items-center gap-6">
-      {/* Left side: Today and Date */}
-      <div>
-        <h2 className="text-2xl font-bold text-white drop-shadow-md">Today</h2>
-        <p className="text-lg text-white/90">{currentDate}</p>
-      </div>
+    <div className="w-full flex justify-between items-center px-4">
+    {/* Left section: Text details */}
+    <div className="flex flex-col justify-center text-white">
+      <h2 className="text-2xl font-bold drop-shadow-md">Today</h2>
+      <p className="text-lg text-white/90">{currentDate}</p>
 
-      {/* Right side: Icon, Description, Temp, and Location */}
-      <div className="flex items-center gap-4">
-        {weatherIcon && (
-          <img
-            src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
-            alt={data.weather[0].description}
-            className="w-[60px] object-cover"
-          />
-        )}
-        <div className="flex flex-col items-start text-white">
-          <span className="capitalize text-sm text-white/80">
-            {data.weather[0].description}
-          </span>
-          <h2 className="text-3xl font-bold">{Math.round(data.main.temp)}°C</h2>
-          <p className="text-sm">
-            {data.name}, {data.sys.country}
-          </p>
-        </div>
-      </div>
+      <h2 className="text-4xl font-bold mt-4">{Math.round(data.main.temp)}°C</h2>
+
+      <span className="capitalize text-base text-white/80 mt-2">
+        {data.weather[0].description}
+      </span>
+
+      <p className="text-md mt-2">
+        {data.name}, {data.sys.country}
+      </p>
     </div>
+
+    {/* Right section: Weather icon */}
+    {weatherIcon && (
+      <div className="flex items-center justify-center">
+        <img
+          src={`https://openweathermap.org/img/wn/${weatherIcon}@4x.png`}
+          alt={data.weather[0].description}
+          className="w-[100px] h-[100px] object-contain"
+        />
+      </div>
+    )}
+  </div>
   );
 
 }
