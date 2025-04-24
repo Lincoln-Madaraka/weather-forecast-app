@@ -15,7 +15,7 @@ const current = ({ data }) => {
                 <div>
               <img  src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
       alt={data.weather[0].description} 
-      className="w-[50px] object-cover h-[50px] rounded-full bg-white/20 p-1 shadow-md" 
+      className="w-[50px] object-cover" 
     />
     <span className="text-xl ">{data.weather[0].description}</span>
              
