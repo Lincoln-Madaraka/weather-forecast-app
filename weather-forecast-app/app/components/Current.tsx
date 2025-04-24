@@ -12,13 +12,13 @@ const current = ({ data }) => {
       <h2 className="text-2xl font-bold drop-shadow-md">Today</h2>
        {/* Right section: Weather icon */}
     {weatherIcon && (
-      <div className="flex items-center justify-center">
+      <span>
         <img
           src={`https://openweathermap.org/img/wn/${weatherIcon}@4x.png`}
           alt={data.weather[0].description}
           className="w-[100px] h-[100px] object-contain"
         />
-      </div>
+      </span>
     )}
       <p className="text-lg text-white/90">{currentDate}</p>
       <h2 className="text-4xl font-bold mt-4">{Math.round(data.main.temp)}°C</h2>
