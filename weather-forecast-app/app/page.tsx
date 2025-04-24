@@ -56,7 +56,7 @@ if (Object.keys(data).length === 0 && error === "") {
 
 
      return (
-     <div className="bg-cover bg-gradient-to-r from-blue-100 via-gray-200 to-white h-screen">
+     <div className="bg-cover bg-gradient-to-r from-sky-200 via-gray-300 to-white h-screen">
       <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
