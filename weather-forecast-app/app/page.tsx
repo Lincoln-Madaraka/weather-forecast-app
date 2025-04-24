@@ -40,7 +40,7 @@ let content;
 if (Object.keys(data).length === 0 && error === "") { 
   content = (
     <div className="flex flex-col items-center justify-center h-full">
-      <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-gray-200">Welcome to Weather Forecast</h2>
+      <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-gray-200 drop-shadow-md">Welcome to Weather Forecast</h2>
       <p className="text-lg text-gray-400">Enter a city name</p>
     </div>
   );
