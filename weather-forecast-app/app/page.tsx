@@ -56,8 +56,7 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg text-gray-400">Enter a Valid city name</p>
     </div>
   );
-}  else if (Object.keys(data).length === 0) {
-  // If data is available but no error, show the weather details
+}  else if (data.main) {
   // If data is available, show the weather details
   content = (
     <div>
