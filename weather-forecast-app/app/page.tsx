@@ -56,14 +56,17 @@ if (Object.keys(data).length === 0 && error === "") {
       <p className="text-lg text-gray-400">Enter a Valid city name</p>
     </div>
   );
-}  else if (data.main) {
+}  else if (data.main?.temp) {
   // If data is available, show the weather details
   content = (
     <div>
       <div className="flex flex-col items-center justify-center h-full">
         <Current />
         <WeatherDetails />
-        <WeekForecast />
+        </div>
+      <div className="flex flex-col items-center justify-center h-full">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-gray-200 drop-shadow-md">7-Day Forecast</h2>
+        <WeekForecast /> 
       </div>
     </div>
   );
@@ -81,13 +84,11 @@ if (Object.keys(data).length === 0 && error === "") {
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
           setLocation={setLocation} />
-         {data.main ? (
+         
             <div className="flex flex-col items-center justify-center h-full">
-               <h2 className="text-4xl font-semibold">{data.main.temp}°C</h2>
+              {content}
             </div>
-               ) : (
-                  content
-                    )}
+             
         </div>
         {/* Footer */}
         <div className="flex justify-center items-center h-16 bg-white/25 rounded-b-lg">

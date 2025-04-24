@@ -1,6 +1,6 @@
 const current = () => {
-  return (
-    <div>current</div>
+  return ( 
+    <div>Current</div>
   )
 }
 
