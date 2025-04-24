@@ -83,7 +83,7 @@ if (Object.keys(data).length === 0 && error === "") {
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
-          <h1 className="absolute top-4 left-6 text-3xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent drop-shadow-md">API Weather</h1>
+          <h1 className="absolute top-5 left-8 text-3xl font-bold bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">API Weather</h1>
         </div>
            {/* Input Section */}
           <Input handleSearch={handleSearch} 
