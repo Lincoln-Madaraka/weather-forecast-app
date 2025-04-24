@@ -1,8 +1,16 @@
 import { getCurrentDate } from "../utils/currentDate";
 import { IoLocationSharp } from "react-icons/io5";
 
+interface CurrentProps {
+  data: {
+    main: { temp: number };
+    weather: { icon: string; description: string }[];
+    name: string;
+    sys: { country: string };
+    };
+  }
 
-const current = ({ data }) => {
+const current = ({ data }:CurrentProps ) => {
     const currentDate = getCurrentDate();
     const weatherIcon = data.weather[0].icon;
 
@@ -28,7 +36,7 @@ const current = ({ data }) => {
       <span className="capitalize text-base text-blue-300 mt-2">
         {data.weather[0].description}
       </span>
-      <div className="flex items-center text-black bg-white/90 px-1 py-2 rounded-xl shadow-lg">
+      <div className="flex items-center text-black bg-white/90 px-1 py-1 rounded-xl shadow-lg">
         <IoLocationSharp className="text-blue-500" size={20} />
       <span className="text-md mt-2">
         {data.name}, {data.sys.country}
