@@ -55,6 +55,8 @@ const WeatherDetails = ({data}) => {
         />
       </span>
     )} 
+    <p><span className="font-semibold">Weather Main:</span> {data.weather[0].main}</p>
+    </p>
     </div>
   </div>
   )
