@@ -8,13 +8,13 @@ interface InputProps {
 
 const Input = ({handleSearch, setLocation}:InputProps ) => {
   return (
-    <div className="pt-10 flex justify-center "> {/* Centering the form */}
+    <div className="sticky pt-10 flex justify-center "> {/* Centering the form */}
       <form className="flex items-center bg-white p-2 rounded-lg shadow-lg w-3/4 md:w-2/4"
         onSubmit={(e) => 
           e.preventDefault()
         }
       > {/* Form Container */}
-        <input
+        <input 
           type="text"
           placeholder="Enter city name"
           className="w-full p-1 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"

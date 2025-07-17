@@ -86,8 +86,8 @@ if (Object.keys(data).length === 0 && error === "") {
 
 
      return (
-     <div className="bg-cover bg-gradient-to-r from-sky-200 via-gray-300 to-white h-screen">
-      <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full" >
+     <div className="bg-cover bg-gradient-to-r from-sky-200 via-gray-300 to-white min-h-screen">
+      <div className ="bg-white/25 w-full rounded-ig flex flex-col h-full min-h-screen" >
       {/* INPUT AND LOGO */}
           {/* Logo */}
         <div className="flex justify-center items-center pt-4">
