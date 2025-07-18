@@ -1,6 +1,4 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/next"
+  base = "weather-forecast-app"
+  command = "npm run build && npm run export"
+  publish = "weather-forecast-app/out"
